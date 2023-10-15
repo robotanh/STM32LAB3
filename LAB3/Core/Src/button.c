@@ -23,12 +23,13 @@ void getKeyInput()
 	KeyReg0 = KeyReg1;
 	KeyReg1 = KeyReg2;
 	KeyReg2 = HAL_GPIO_ReadPin(BUTTON_GPIO_Port, BUTTON_Pin);
-	if((KeyReg0 == KeyReg1 &&(KeyReg1 == KeyReg2))){
+	if((KeyReg0 == KeyReg1) &&(KeyReg1 == KeyReg2)){
 		if(KeyReg3 != KeyReg2){
 			KeyReg3 = KeyReg2;
 			if(KeyReg2 == PRESSED_STATE)
 			{
 				//TODO
+				subKeyProcess();
 				TimerForKeyPress = 200;
 			}
 		}
@@ -36,7 +37,13 @@ void getKeyInput()
 			TimerForKeyPress--;
 			if(TimerForKeyPress == 0){
 				//TODO
-				TimerForKeyPress = 200;
+				if(KeyReg2 == PRESSED_STATE)
+				{
+					//TODO
+					subKeyProcess();
+					TimerForKeyPress = 200;
+				}
+
 			}
 
 		}
