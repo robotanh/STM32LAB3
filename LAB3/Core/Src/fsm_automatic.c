@@ -24,6 +24,7 @@ void fsm_automatic_run(){
 		 }
 		 if(isButton1Pressed()==1)
 		 {
+			 MAN_duaration =0;
 			 status = MAN_RED;
 			 set_Timer1(1000);
 		 }
@@ -32,8 +33,15 @@ void fsm_automatic_run(){
 		 set_green();
 		 if(timer1_flag ==1)
 		 {
+
 			 status = AUTO_YELLOW;
 			 set_Timer1(yellow_duaration*100);
+		 }
+		 if(isButton1Pressed()==1)
+		 {
+			 MAN_duaration =0;
+			 status = MAN_GREEN;
+			 set_Timer1(1000);
 		 }
 
 		 break;
@@ -43,6 +51,12 @@ void fsm_automatic_run(){
 		 {
 			 status = AUTO_RED;
 			 set_Timer1(red_duaration*100);
+		 }
+		 if(isButton1Pressed()==1)
+		 {
+			 MAN_duaration =0;
+			 status = MAN_YELLOW;
+			 set_Timer1(1000);
 		 }
 		 break;
 	 default:
