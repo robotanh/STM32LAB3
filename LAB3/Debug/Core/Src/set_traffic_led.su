@@ -1,0 +1,4 @@
+set_traffic_led.c:11:6:set_red	8	static
+set_traffic_led.c:17:6:set_green	8	static
+set_traffic_led.c:23:6:set_yellow	8	static
+set_traffic_led.c:29:6:clear	8	static
