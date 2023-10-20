@@ -13,16 +13,16 @@ void fsm_manual_run(){
 			set_red();
 			if(timer1_flag == 1){
 				status = AUTO_RED;
-				set_Timer1(red_duaration*100);
+				set_Timer1(red_duration*100);
 			}
 			if(isButton1Pressed()==1){
-				MAN_duaration =0;
+				MAN_duration =0;
 				status = MAN_GREEN;
 				set_Timer1(500);
 			}
 			// when press button2 update red duaration
 			if(isButton2Pressed()==1){
-				red_duaration = MAN_duaration;
+				red_duration = MAN_duration;
 				set_Timer1(200);
 				if(timer1_flag==1){
 					status = AUTO_RED;
@@ -36,16 +36,16 @@ void fsm_manual_run(){
 			set_green();
 			if(timer1_flag==1){
 				status = AUTO_GREEN;
-				set_Timer1(green_duaration*100);
+				set_Timer1(green_duration*100);
 			}
 			if(isButton1Pressed()==1){
-				MAN_duaration =0;
+				MAN_duration =0;
 				status = MAN_YELLOW;
 				set_Timer1(500);
 			}
-			// when press button2 update green duaration
+			// when press button2 update green duration
 			if(isButton2Pressed()==1){
-				green_duaration = MAN_duaration;
+				green_duration = MAN_duration;
 				set_Timer1(200);
 				if(timer1_flag==1){
 					status = AUTO_GREEN;
@@ -59,15 +59,15 @@ void fsm_manual_run(){
 			set_yellow();
 			if(timer1_flag==1){
 				status = AUTO_YELLOW;
-				set_Timer1(yellow_duaration*100);
+				set_Timer1(yellow_duration*100);
 			}
 			if(isButton1Pressed()==1){
-				MAN_duaration =0;
+				MAN_duration =0;
 				status = MAN_RED;
 				set_Timer1(500);
 			}
 			if(isButton2Pressed()==1){
-				yellow_duaration = MAN_duaration;
+				yellow_duration = MAN_duration;
 				set_Timer1(200);
 				if(timer1_flag==1){
 					status = AUTO_YELLOW;

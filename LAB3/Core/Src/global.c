@@ -7,11 +7,11 @@
 #include "global.h"
 
 int status =0;
-int MAN_duaration = 0;
+int MAN_duration = 0;
 
-int red_duaration = 5;
-int green_duaration = 3;
-int yellow_duaration = 2;
+int red_duration = 5;
+int green_duration = 3;
+int yellow_duration = 2;
 
 
 

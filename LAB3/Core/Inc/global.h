@@ -25,11 +25,11 @@
 
 
 extern int status;
-extern int MAN_duaration;
+extern int MAN_duration;
 
-extern int red_duaration ;
-extern int green_duaration ;
-extern int yellow_duaration ;
+extern int red_duration ;
+extern int green_duration ;
+extern int yellow_duration ;
 
 
 #endif /* INC_GLOBAL_H_ */

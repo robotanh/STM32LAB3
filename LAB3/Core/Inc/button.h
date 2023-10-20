@@ -22,6 +22,7 @@ void set_button1_flag();
 void set_button2_flag();
 void reset_button1_flag();
 void Button1Press();
+void set_duration_main();
 int isButton1Pressed();
 int isButton2Pressed();
 

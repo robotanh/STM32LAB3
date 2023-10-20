@@ -12,7 +12,7 @@ void fsm_automatic_run(){
 		 clear();
 
 		 status = AUTO_RED;
-		 set_Timer1(red_duaration*100);
+		 set_Timer1(red_duration*100);
 
 		 break;
 	 case AUTO_RED:
@@ -20,11 +20,11 @@ void fsm_automatic_run(){
 		 if(timer1_flag ==1)
 		 {
 			 status = AUTO_GREEN;
-			 set_Timer1(green_duaration*100);
+			 set_Timer1(green_duration*100);
 		 }
 		 if(isButton1Pressed()==1)
 		 {
-			 MAN_duaration =0;
+			 MAN_duration =0;
 			 status = MAN_RED;
 			 set_Timer1(1000);
 		 }
@@ -35,11 +35,11 @@ void fsm_automatic_run(){
 		 {
 
 			 status = AUTO_YELLOW;
-			 set_Timer1(yellow_duaration*100);
+			 set_Timer1(yellow_duration*100);
 		 }
 		 if(isButton1Pressed()==1)
 		 {
-			 MAN_duaration =0;
+			 MAN_duration =0;
 			 status = MAN_GREEN;
 			 set_Timer1(1000);
 		 }
@@ -50,11 +50,11 @@ void fsm_automatic_run(){
 		 if(timer1_flag ==1)
 		 {
 			 status = AUTO_RED;
-			 set_Timer1(red_duaration*100);
+			 set_Timer1(red_duration*100);
 		 }
 		 if(isButton1Pressed()==1)
 		 {
-			 MAN_duaration =0;
+			 MAN_duration =0;
 			 status = MAN_YELLOW;
 			 set_Timer1(1000);
 		 }

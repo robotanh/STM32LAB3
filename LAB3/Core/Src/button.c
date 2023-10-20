@@ -97,8 +97,8 @@ void set_duration_main()
 			{
 				//TODO
 				set_button2_flag();
-				MAN_duaration ++;
-				if(MAN_duaration == 100) MAN_duaration=0;	//reset if man_duaration ==100
+				MAN_duration ++;
+				if(MAN_duration == 100) MAN_duration=0;	//reset if man_duaration ==100
 				TimerForKeyPress = 200;
 			}
 		}
@@ -110,8 +110,8 @@ void set_duration_main()
 				{
 					//TODO
 					set_button2_flag();
-					MAN_duaration ++;
-					if(MAN_duaration == 100) MAN_duaration=0;	//reset if man_duaration ==100
+					MAN_duration ++;
+					if(MAN_duration == 100) MAN_duration=0;	//reset if man_duaration ==100
 					TimerForKeyPress = 200;
 				}
 
