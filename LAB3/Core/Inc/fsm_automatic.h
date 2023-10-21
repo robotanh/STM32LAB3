@@ -11,6 +11,7 @@
 #include "global.h"
 
 void fsm_automatic_run();
+void traffic_led_follow();
 
 
 

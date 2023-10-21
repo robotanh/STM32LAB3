@@ -13,6 +13,9 @@
 void set_red();
 void set_green();
 void set_yellow();
+void set_red_follow();
+void set_green_follow();
+void set_yellow_follow();
 void clear();
 void set_autoAjust_red(int );
 void set_autoAjust_yellow(int );

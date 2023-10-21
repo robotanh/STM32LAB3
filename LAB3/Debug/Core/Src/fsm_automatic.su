@@ -1,1 +1,2 @@
 fsm_automatic.c:9:6:fsm_automatic_run	8	static
+fsm_automatic.c:77:6:traffic_led_follow	4	static

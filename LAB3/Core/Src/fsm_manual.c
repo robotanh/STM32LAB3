@@ -11,6 +11,7 @@ void fsm_manual_run(){
 	switch(status){
 		case MAN_RED:
 			set_red();
+			set_red_follow();
 			if(timer1_flag == 1){
 				status = AUTO_RED;
 				set_Timer1(red_duration*100);
@@ -36,6 +37,7 @@ void fsm_manual_run(){
 	////////////////////////////////////////
 		case MAN_GREEN:
 			set_green();
+			set_green_follow();
 			if(timer1_flag==1){
 				status = AUTO_GREEN;
 				set_Timer1(green_duration*100);
@@ -61,6 +63,7 @@ void fsm_manual_run(){
 	///////////////////////////////////////////////////
 		case MAN_YELLOW:
 			set_yellow();
+			set_yellow_follow();
 			if(timer1_flag==1){
 				status = AUTO_YELLOW;
 				set_Timer1(yellow_duration*100);

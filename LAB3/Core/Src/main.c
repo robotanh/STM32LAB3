@@ -205,8 +205,8 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3|GPIO_PIN_4|LED_RED_Pin|LED_YELLOW_Pin
-                          |LED_GREEN_Pin|GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10
+  HAL_GPIO_WritePin(GPIOA, LED_RED1_Pin|LED_YELLOW1_Pin|LED_RED_Pin|LED_YELLOW_Pin
+                          |LED_GREEN_Pin|LED_GREEN1_Pin|GPIO_PIN_9|GPIO_PIN_10
                           |GPIO_PIN_11|GPIO_PIN_12, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
@@ -219,11 +219,11 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_PULLUP;
   HAL_GPIO_Init(BUTTON_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PA3 PA4 LED_RED_Pin LED_YELLOW_Pin
-                           LED_GREEN_Pin PA8 PA9 PA10
+  /*Configure GPIO pins : LED_RED1_Pin LED_YELLOW1_Pin LED_RED_Pin LED_YELLOW_Pin
+                           LED_GREEN_Pin LED_GREEN1_Pin PA9 PA10
                            PA11 PA12 */
-  GPIO_InitStruct.Pin = GPIO_PIN_3|GPIO_PIN_4|LED_RED_Pin|LED_YELLOW_Pin
-                          |LED_GREEN_Pin|GPIO_PIN_8|GPIO_PIN_9|GPIO_PIN_10
+  GPIO_InitStruct.Pin = LED_RED1_Pin|LED_YELLOW1_Pin|LED_RED_Pin|LED_YELLOW_Pin
+                          |LED_GREEN_Pin|LED_GREEN1_Pin|GPIO_PIN_9|GPIO_PIN_10
                           |GPIO_PIN_11|GPIO_PIN_12;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
