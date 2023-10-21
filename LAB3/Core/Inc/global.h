@@ -31,10 +31,15 @@ extern float red_duration ;
 extern float green_duration ;
 extern float yellow_duration ;
 extern int led;
+extern int led1;
 
 extern float red_counter ;
 extern float green_counter ;
 extern float yellow_counter ;
+
+extern float red_counter_1 ;
+extern float green_counter_1 ;
+extern float yellow_counter_1 ;
 
 
 #endif /* INC_GLOBAL_H_ */

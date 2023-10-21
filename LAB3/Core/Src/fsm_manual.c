@@ -56,7 +56,7 @@ void fsm_manual_run(){
 				//green_duration = MAN_duration;
 				set_Timer1(200);
 				if(timer1_flag==1){
-					status = AUTO_GREEN;
+					status = AUTO_RED;				//Back to red and do auto
 					reset_counter();				//for counting down time
 					MAN_duration=0;
 				}
@@ -83,7 +83,7 @@ void fsm_manual_run(){
 				//yellow_duration = MAN_duration;
 				set_Timer1(200);
 				if(timer1_flag==1){
-					status = AUTO_YELLOW;
+					status = AUTO_RED;				//Back to red and do auto
 					reset_counter();				//for counting down time
 					MAN_duration=0;
 				}

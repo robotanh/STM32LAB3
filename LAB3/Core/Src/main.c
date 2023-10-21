@@ -104,6 +104,7 @@ int main(void)
   {
     /* USER CODE END WHILE */
 	  traffic_7Segment_led();
+	  traffic_7Segment_led1();
 	  fsm_automatic_run();
 	  fsm_manual_run();
 

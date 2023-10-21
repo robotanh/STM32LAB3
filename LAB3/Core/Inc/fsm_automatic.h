@@ -14,6 +14,7 @@ void fsm_automatic_run();
 void traffic_7Segment_led();
 
 void reset_counter();
+void reset_counter_follow();
 
 
 

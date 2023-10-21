@@ -29,6 +29,7 @@ void fsm_automatic_run(){
 			 status = AUTO_GREEN;
 			 set_Timer1((int)(green_duration*100));
 			 reset_counter();				//for counting down time
+			 reset_counter_follow();
 		 }
 		 if(isButton1Pressed()==1)
 		 {
@@ -82,11 +83,15 @@ void reset_counter(){
 	green_counter=green_duration;
 	yellow_counter=yellow_duration;
 }
+void reset_counter_follow(){
+	red_counter_1 = red_duration;
+	green_counter_1=green_duration;
+	yellow_counter_1=yellow_duration;
+}
 void traffic_7Segment_led(){
 	switch(status){
 	case INIT:
 		timer3_flag=1;			//timer for led 7 segment admin
-		timer4_flag=1;  		//timer real time 1 sec
 		reset_counter();
 		break;
 	case AUTO_RED:
@@ -100,10 +105,6 @@ void traffic_7Segment_led(){
 			red_counter--;
 			led =0;
 			set_Timer3(50);
-		}
-		if(timer4_flag==1){
-			if(red_counter <0)red_counter=0;
-			set_Timer4(100);
 		}
 
 		break;
@@ -119,10 +120,7 @@ void traffic_7Segment_led(){
 			led = 0;
 			set_Timer3(50);
 		}
-		if(timer4_flag==1){
-			if(green_counter <0)green_counter=0;
-			set_Timer4(100);
-		}
+
 		break;
 	case AUTO_YELLOW:
 		if(timer3_flag==1 && led ==0){
@@ -136,13 +134,72 @@ void traffic_7Segment_led(){
 			led = 0;
 			set_Timer3(50);
 		}
-		if(timer4_flag==1){
-			if(yellow_counter <0)	yellow_counter=0;
-			set_Timer4(100);
-		}
+
 		break;
 	default:
 		break;
+	}
+}
+void traffic_7Segment_led1(){
+	switch(status){
+		case INIT:
+			timer4_flag=1;			//timer for led 7 segment admin
+			reset_counter_follow();
+			break;
+		case AUTO_RED:
+			if(green_counter_1<0){
+				if(timer4_flag==1 && led1 ==0){		//yellow follow led
+					set_7Segment_2(led1, yellow_counter_1/10);
+					led1 = 1;
+					set_Timer4(50);
+				}
+				else if(timer4_flag==1 && led1 ==1){
+					set_7Segment_2(led1, (int)yellow_counter_1%10);
+					yellow_counter_1--;
+					led1 =0;
+					set_Timer4(50);
+				}
+			}
+			else if(timer4_flag==1 && led1 ==0){		//green follow led
+				set_7Segment_2(led1, green_counter_1/10);
+				led1 = 1;
+				set_Timer4(50);
+			}
+			else if(timer4_flag==1 && led1 ==1){
+				set_7Segment_2(led1, (int)green_counter_1%10);
+				green_counter_1--;
+				led1 =0;
+				set_Timer4(50);
+			}
+			break;
+		case AUTO_GREEN:
+			if(timer4_flag==1 && led1 ==0){
+				set_7Segment_2(led1, red_counter_1/10);
+				led1 = 1;
+				set_Timer4(50);
+			}
+			else if(timer4_flag==1 && led1 ==1){
+				set_7Segment_2(led1, (int)red_counter_1%10);
+				red_counter_1--;
+				led1 = 0;
+				set_Timer4(50);
+			}
+			break;
+		case AUTO_YELLOW:
+			if(timer4_flag==1 && led1 ==0){
+				set_7Segment_2(led1, red_counter_1/10);
+				led1 = 1;
+				set_Timer4(50);
+			}
+			else if(timer4_flag==1 && led1 ==1){
+				set_7Segment_2(led1, (int)red_counter_1%10);
+				red_counter_1--;
+				led1 = 0;
+				set_Timer4(50);
+			}
+			break;
+		default:
+			break;
 	}
 }
 
