@@ -8,6 +8,111 @@
 
 #include "set_traffic_led.h"
 
+void set_7Segment_2(int led,int duration)
+{
+	if(led ==0){
+		HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 0);
+		HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 1);
+	}
+	if(led ==1){
+		HAL_GPIO_WritePin(EN1_GPIO_Port, EN1_Pin, 1);
+		HAL_GPIO_WritePin(EN3_GPIO_Port, EN3_Pin, 0);
+	}
+	switch(duration){
+		case 0:
+			HAL_GPIO_WritePin(a2_GPIO_Port, a2_Pin, 0);
+			HAL_GPIO_WritePin(b2_GPIO_Port, b2_Pin, 0);
+			HAL_GPIO_WritePin(c2_GPIO_Port, c2_Pin, 0);
+			HAL_GPIO_WritePin(d2_GPIO_Port, d2_Pin, 0);
+			HAL_GPIO_WritePin(e2_GPIO_Port, e2_Pin, 0);
+			HAL_GPIO_WritePin(f2_GPIO_Port, f2_Pin, 0);
+			HAL_GPIO_WritePin(g2_GPIO_Port, g2_Pin, 1);
+			break;
+		case 1:
+			HAL_GPIO_WritePin(a2_GPIO_Port, a2_Pin, 1);
+			HAL_GPIO_WritePin(b2_GPIO_Port, b2_Pin, 0);
+			HAL_GPIO_WritePin(c2_GPIO_Port, c2_Pin, 0);
+			HAL_GPIO_WritePin(d2_GPIO_Port, d2_Pin, 1);
+			HAL_GPIO_WritePin(e2_GPIO_Port, e2_Pin, 1);
+			HAL_GPIO_WritePin(f2_GPIO_Port, f2_Pin, 1);
+			HAL_GPIO_WritePin(g2_GPIO_Port, g2_Pin, 1);
+			break;
+		case 2:
+			HAL_GPIO_WritePin(a2_GPIO_Port, a2_Pin, 0);
+			HAL_GPIO_WritePin(b2_GPIO_Port, b2_Pin, 0);
+			HAL_GPIO_WritePin(c2_GPIO_Port, c2_Pin, 1);
+			HAL_GPIO_WritePin(d2_GPIO_Port, d2_Pin, 0);
+			HAL_GPIO_WritePin(e2_GPIO_Port, e2_Pin, 0);
+			HAL_GPIO_WritePin(f2_GPIO_Port, f2_Pin, 1);
+			HAL_GPIO_WritePin(g2_GPIO_Port, g2_Pin, 0);
+			break;
+		case 3:
+			HAL_GPIO_WritePin(a2_GPIO_Port, a2_Pin, 0);
+			HAL_GPIO_WritePin(b2_GPIO_Port, b2_Pin, 0);
+			HAL_GPIO_WritePin(c2_GPIO_Port, c2_Pin, 0);
+			HAL_GPIO_WritePin(d2_GPIO_Port, d2_Pin, 0);
+			HAL_GPIO_WritePin(e2_GPIO_Port, e2_Pin, 1);
+			HAL_GPIO_WritePin(f2_GPIO_Port, f2_Pin, 1);
+			HAL_GPIO_WritePin(g2_GPIO_Port, g2_Pin, 0);
+			break;
+		case 4:
+			HAL_GPIO_WritePin(a2_GPIO_Port, a2_Pin, 1);
+			HAL_GPIO_WritePin(b2_GPIO_Port, b2_Pin, 0);
+			HAL_GPIO_WritePin(c2_GPIO_Port, c2_Pin, 0);
+			HAL_GPIO_WritePin(d2_GPIO_Port, d2_Pin, 1);
+			HAL_GPIO_WritePin(e2_GPIO_Port, e2_Pin, 1);
+			HAL_GPIO_WritePin(f2_GPIO_Port, f2_Pin, 0);
+			HAL_GPIO_WritePin(g2_GPIO_Port, g2_Pin, 0);
+			break;
+		case 5:
+			HAL_GPIO_WritePin(a2_GPIO_Port, a2_Pin, 0);
+			HAL_GPIO_WritePin(b2_GPIO_Port, b2_Pin, 1);
+			HAL_GPIO_WritePin(c2_GPIO_Port, c2_Pin, 0);
+			HAL_GPIO_WritePin(d2_GPIO_Port, d2_Pin, 0);
+			HAL_GPIO_WritePin(e2_GPIO_Port, e2_Pin, 1);
+			HAL_GPIO_WritePin(f2_GPIO_Port, f2_Pin, 0);
+			HAL_GPIO_WritePin(g2_GPIO_Port, g2_Pin, 0);
+			break;
+		case 6:
+			HAL_GPIO_WritePin(a2_GPIO_Port, a2_Pin, 0);
+			HAL_GPIO_WritePin(b2_GPIO_Port, b2_Pin, 1);
+			HAL_GPIO_WritePin(c2_GPIO_Port, c2_Pin, 0);
+			HAL_GPIO_WritePin(d2_GPIO_Port, d2_Pin, 0);
+			HAL_GPIO_WritePin(e2_GPIO_Port, e2_Pin, 0);
+			HAL_GPIO_WritePin(f2_GPIO_Port, f2_Pin, 0);
+			HAL_GPIO_WritePin(g2_GPIO_Port, g2_Pin, 0);
+			break;
+		case 7:
+			HAL_GPIO_WritePin(a2_GPIO_Port, a2_Pin, 0);
+			HAL_GPIO_WritePin(b2_GPIO_Port, b2_Pin, 0);
+			HAL_GPIO_WritePin(c2_GPIO_Port, c2_Pin, 0);
+			HAL_GPIO_WritePin(d2_GPIO_Port, d2_Pin, 1);
+			HAL_GPIO_WritePin(e2_GPIO_Port, e2_Pin, 1);
+			HAL_GPIO_WritePin(f2_GPIO_Port, f2_Pin, 1);
+			HAL_GPIO_WritePin(g2_GPIO_Port, g2_Pin, 1);
+			break;
+		case 8:
+			HAL_GPIO_WritePin(a2_GPIO_Port, a2_Pin, 0);
+			HAL_GPIO_WritePin(b2_GPIO_Port, b2_Pin, 0);
+			HAL_GPIO_WritePin(c2_GPIO_Port, c2_Pin, 0);
+			HAL_GPIO_WritePin(d2_GPIO_Port, d2_Pin, 0);
+			HAL_GPIO_WritePin(e2_GPIO_Port, e2_Pin, 0);
+			HAL_GPIO_WritePin(f2_GPIO_Port, f2_Pin, 0);
+			HAL_GPIO_WritePin(g2_GPIO_Port, g2_Pin, 0);
+			break;
+		case 9:
+			HAL_GPIO_WritePin(a2_GPIO_Port, a2_Pin, 0);
+			HAL_GPIO_WritePin(b2_GPIO_Port, b2_Pin, 0);
+			HAL_GPIO_WritePin(c2_GPIO_Port, c2_Pin, 0);
+			HAL_GPIO_WritePin(d2_GPIO_Port, d2_Pin, 0);
+			HAL_GPIO_WritePin(e2_GPIO_Port, e2_Pin, 1);
+			HAL_GPIO_WritePin(f2_GPIO_Port, f2_Pin, 0);
+			HAL_GPIO_WritePin(g2_GPIO_Port, g2_Pin, 0);
+			break;
+		default:
+			break;
+	}
+}
 void set_7Segment_1(int led,int duration)
 {
 	if(led ==0){
@@ -112,10 +217,6 @@ void set_7Segment_1(int led,int duration)
 		default:
 			break;
 	}
-}
-void set_7Segment_2(int duration)
-{
-
 }
 void set_red()
 {

@@ -85,8 +85,8 @@ void reset_counter(){
 void traffic_7Segment_led(){
 	switch(status){
 	case INIT:
-		timer3_flag=1;
-		timer4_flag=1;
+		timer3_flag=1;			//timer for led 7 segment admin
+		timer4_flag=1;  		//timer real time 1 sec
 		reset_counter();
 		break;
 	case AUTO_RED:

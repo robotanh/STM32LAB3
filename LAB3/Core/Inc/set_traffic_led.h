@@ -17,7 +17,7 @@ void set_red_follow();
 void set_green_follow();
 void set_yellow_follow();
 void set_7Segment_1(int,int);
-void set_7Segment_2(int);
+void set_7Segment_2(int,int);
 void clear();
 void set_autoAjust_red(int );
 void set_autoAjust_yellow(int );
