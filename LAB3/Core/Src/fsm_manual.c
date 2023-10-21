@@ -9,9 +9,13 @@
 
 void fsm_manual_run(){
 	switch(status){
+		case MAN_INIT:
+			set_7segled_mode(1);
+			break;
 		case MAN_RED:
 			set_red();
 			set_red_follow();
+			set_7segled_mode(2);
 			if(timer1_flag == 1){
 				status = AUTO_RED;
 				reset_counter();				//for counting down time
@@ -40,6 +44,7 @@ void fsm_manual_run(){
 		case MAN_GREEN:
 			set_green();
 			set_green_follow();
+			set_7segled_mode(3);
 			if(timer1_flag==1){
 				status = AUTO_GREEN;
 				reset_counter();				//for counting down time
@@ -68,6 +73,7 @@ void fsm_manual_run(){
 		case MAN_YELLOW:
 			set_yellow();
 			set_yellow_follow();
+			set_7segled_mode(4);
 			if(timer1_flag==1){
 				status = AUTO_YELLOW;
 				reset_counter();				//for counting down time

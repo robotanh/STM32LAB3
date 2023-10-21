@@ -18,6 +18,7 @@
 #define AUTO_GREEN	3
 #define AUTO_YELLOW	4
 
+#define MAN_INIT	13
 #define MAN_RED		14
 #define MAN_GREEN	15
 #define MAN_YELLOW	16

@@ -10,3 +10,4 @@ set_traffic_led.c:257:6:set_autoAjust_red	16	static
 set_traffic_led.c:263:6:set_autoAjust_yellow	16	static
 set_traffic_led.c:269:6:set_autoAjust_green	16	static
 set_traffic_led.c:276:6:clear	8	static
+set_traffic_led.c:283:6:set_7segled_mode	16	static

@@ -280,4 +280,61 @@ void clear()
 	 HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, 0);
 }
 
+void set_7segled_mode(int mode)
+{
+	switch(mode){
+	case 1:
+		if(timer5_flag==1 && led==0){
+			set_7Segment_1(led, 0);
+			led=1;
+			set_Timer5(50);
+		}
+		else if(timer5_flag==1 && led==1){
+			set_7Segment_1(led, 1);
+			led=0;
+			set_Timer5(50);
+		}
+
+		break;
+	case 2:
+		if(timer5_flag==1 && led==0){
+			set_7Segment_1(led, 0);
+			led=1;
+			set_Timer5(50);
+		}
+		else if(timer5_flag==1 && led==1){
+			set_7Segment_1(led, 2);
+			led=0;
+			set_Timer5(50);
+		}
+		break;
+	case 3:
+		if(timer5_flag==1 && led==0){
+			set_7Segment_1(led, 0);
+			led=1;
+			set_Timer5(50);
+		}
+		else if(timer5_flag==1 && led==1){
+			set_7Segment_1(led, 3);
+			led=0;
+			set_Timer5(50);
+		}
+		break;
+	case 4:
+		if(timer5_flag==1 && led==0){
+			set_7Segment_1(led, 0);
+			led=1;
+			set_Timer5(50);
+		}
+		else if(timer5_flag==1 && led==1){
+			set_7Segment_1(led, 4);
+			led=0;
+			set_Timer5(50);
+		}
+		break;
+	default:
+		break;
+	}
+}
+
 
