@@ -10,7 +10,19 @@
 void fsm_manual_run(){
 	switch(status){
 		case MAN_INIT:
+			clear();
+			clear_follow();
 			set_7segled_mode(1);
+			if(isButton1Pressed()==1){
+				MAN_duration =0;
+				status = MAN_RED;
+				set_Timer1(500);
+			}
+			if(timer1_flag == 1){
+				status = AUTO_RED;
+				reset_counter();				//for counting down time
+				set_Timer1(red_duration*100);
+			}
 			break;
 		case MAN_RED:
 			set_red();
@@ -81,7 +93,7 @@ void fsm_manual_run(){
 			}
 			if(isButton1Pressed()==1){
 				MAN_duration =0;
-				status = MAN_RED;
+				status = MAN_INIT;
 				set_Timer1(500);
 			}
 			if(isButton2Pressed()==1){

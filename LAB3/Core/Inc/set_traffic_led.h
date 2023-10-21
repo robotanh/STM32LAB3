@@ -20,6 +20,7 @@ void set_7Segment_1(int,int);
 void set_7Segment_2(int,int);
 void set_7segled_mode(int );
 void clear();
+void clear_follow();
 void set_autoAjust_red(int );
 void set_autoAjust_yellow(int );
 void set_autoAjust_green(int );

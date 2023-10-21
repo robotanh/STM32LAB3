@@ -34,7 +34,7 @@ void fsm_automatic_run(){
 		 if(isButton1Pressed()==1)
 		 {
 			 MAN_duration =0;
-			 status = MAN_RED;
+			 status = MAN_INIT;
 			 set_Timer1(1000);
 		 }
 		 break;
@@ -51,7 +51,7 @@ void fsm_automatic_run(){
 		 if(isButton1Pressed()==1)
 		 {
 			 MAN_duration =0;
-			 status = MAN_GREEN;
+			 status = MAN_INIT;
 			 set_Timer1(1000);
 		 }
 
@@ -70,7 +70,7 @@ void fsm_automatic_run(){
 		 if(isButton1Pressed()==1)
 		 {
 			 MAN_duration =0;
-			 status = MAN_YELLOW;
+			 status = MAN_INIT;
 			 set_Timer1(1000);
 		 }
 		 break;
