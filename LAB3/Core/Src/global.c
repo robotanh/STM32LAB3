@@ -9,9 +9,9 @@
 int status =0;
 int MAN_duration = 0;
 
-int red_duration = 5;
-int green_duration = 3;
-int yellow_duration = 2;
+float red_duration = 5;
+float green_duration = 3;
+float yellow_duration = 2;
 
 
 

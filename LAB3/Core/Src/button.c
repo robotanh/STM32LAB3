@@ -7,9 +7,9 @@
 
 #include "button.h"
 
-int set_duration_RED 	=0;
-int set_duration_YELLOW =0;
-int set_duration_GREEN	=0;
+//int set_duration_RED 	=0;
+//int set_duration_YELLOW =0;
+//int set_duration_GREEN	=0;
 
 int KeyReg0 = NORMAL_STATE;
 int KeyReg1 = NORMAL_STATE;

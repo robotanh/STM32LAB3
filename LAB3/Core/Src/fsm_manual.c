@@ -22,10 +22,12 @@ void fsm_manual_run(){
 			}
 			// when press button2 update red duaration
 			if(isButton2Pressed()==1){
-				red_duration = MAN_duration;
+				set_autoAjust_red(MAN_duration);
+				//red_duration = MAN_duration;
 				set_Timer1(200);
 				if(timer1_flag==1){
 					status = AUTO_RED;
+					MAN_duration=0;
 				}
 
 			}
@@ -45,10 +47,12 @@ void fsm_manual_run(){
 			}
 			// when press button2 update green duration
 			if(isButton2Pressed()==1){
-				green_duration = MAN_duration;
+				set_autoAjust_green(MAN_duration);
+				//green_duration = MAN_duration;
 				set_Timer1(200);
 				if(timer1_flag==1){
 					status = AUTO_GREEN;
+					MAN_duration=0;
 				}
 			}
 
@@ -67,10 +71,12 @@ void fsm_manual_run(){
 				set_Timer1(500);
 			}
 			if(isButton2Pressed()==1){
-				yellow_duration = MAN_duration;
+				set_autoAjust_yellow(MAN_duration);
+				//yellow_duration = MAN_duration;
 				set_Timer1(200);
 				if(timer1_flag==1){
 					status = AUTO_YELLOW;
+					MAN_duration=0;
 				}
 			}
 

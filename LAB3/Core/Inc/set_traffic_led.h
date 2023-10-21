@@ -14,9 +14,9 @@ void set_red();
 void set_green();
 void set_yellow();
 void clear();
-void set_autoAjust_red(int MAN_duration);
-void set_autoAjust_yellow(int MAN_duration);
-void set_autoAjust_green(int MAN_duration);
+void set_autoAjust_red(int );
+void set_autoAjust_yellow(int );
+void set_autoAjust_green(int );
 
 
 #endif /* INC_SET_TRAFFIC_LED_H_ */
