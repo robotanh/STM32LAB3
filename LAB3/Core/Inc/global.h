@@ -30,6 +30,11 @@ extern int MAN_duration;
 extern float red_duration ;
 extern float green_duration ;
 extern float yellow_duration ;
+extern int led;
+
+extern float red_counter ;
+extern float green_counter ;
+extern float yellow_counter ;
 
 
 #endif /* INC_GLOBAL_H_ */

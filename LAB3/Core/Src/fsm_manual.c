@@ -14,6 +14,7 @@ void fsm_manual_run(){
 			set_red_follow();
 			if(timer1_flag == 1){
 				status = AUTO_RED;
+				reset_counter();				//for counting down time
 				set_Timer1(red_duration*100);
 			}
 			if(isButton1Pressed()==1){
@@ -28,6 +29,7 @@ void fsm_manual_run(){
 				set_Timer1(200);
 				if(timer1_flag==1){
 					status = AUTO_RED;
+					reset_counter();				//for counting down time
 					MAN_duration=0;
 				}
 
@@ -40,6 +42,7 @@ void fsm_manual_run(){
 			set_green_follow();
 			if(timer1_flag==1){
 				status = AUTO_GREEN;
+				reset_counter();				//for counting down time
 				set_Timer1(green_duration*100);
 			}
 			if(isButton1Pressed()==1){
@@ -54,6 +57,7 @@ void fsm_manual_run(){
 				set_Timer1(200);
 				if(timer1_flag==1){
 					status = AUTO_GREEN;
+					reset_counter();				//for counting down time
 					MAN_duration=0;
 				}
 			}
@@ -66,6 +70,7 @@ void fsm_manual_run(){
 			set_yellow_follow();
 			if(timer1_flag==1){
 				status = AUTO_YELLOW;
+				reset_counter();				//for counting down time
 				set_Timer1(yellow_duration*100);
 			}
 			if(isButton1Pressed()==1){
@@ -79,6 +84,7 @@ void fsm_manual_run(){
 				set_Timer1(200);
 				if(timer1_flag==1){
 					status = AUTO_YELLOW;
+					reset_counter();				//for counting down time
 					MAN_duration=0;
 				}
 			}
