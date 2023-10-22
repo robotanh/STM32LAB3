@@ -17,7 +17,7 @@ int timer4_flag = 0;
 int timer4_counter =0;
 int timer5_flag = 1;
 int timer5_counter =0;
-int timer6_flag = 0;
+int timer6_flag = 1;
 int timer6_counter =0;
 
 void set_Timer1(int duration)

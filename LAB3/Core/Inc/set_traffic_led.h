@@ -19,6 +19,7 @@ void set_yellow_follow();
 void set_7Segment_1(int,int);
 void set_7Segment_2(int,int);
 void set_7segled_mode(int );
+void set_7segled_duration(int);
 void clear();
 void clear_follow();
 void set_autoAjust_red(int );

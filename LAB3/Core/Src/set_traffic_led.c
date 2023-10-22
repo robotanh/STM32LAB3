@@ -342,5 +342,17 @@ void set_7segled_mode(int mode)
 		break;
 	}
 }
+void set_7segled_duration(int duration){
+	if(timer6_flag==1 && led1==0){
+		set_7Segment_2(led1, duration/10);
+		led1 = 1;
+		set_Timer6(50);
+	}
+	else if(timer6_flag==1 && led1==1){
+		set_7Segment_2(led1, duration%10);
+		led1 = 0;
+		set_Timer6(50);
+	}
+}
 
 

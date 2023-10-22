@@ -6,6 +6,7 @@
  */
 
 #include"fsm_manual.h"
+#include"fsm_automatic.h"
 
 void fsm_manual_run(){
 	switch(status){
@@ -28,6 +29,7 @@ void fsm_manual_run(){
 			set_red();
 			set_red_follow();
 			set_7segled_mode(2);
+			set_7segled_duration(MAN_duration);
 			if(timer1_flag == 1){
 				status = AUTO_RED;
 				reset_counter();				//for counting down time
@@ -57,8 +59,9 @@ void fsm_manual_run(){
 			set_green();
 			set_green_follow();
 			set_7segled_mode(3);
+			set_7segled_duration(MAN_duration);
 			if(timer1_flag==1){
-				status = AUTO_GREEN;
+				status = AUTO_RED;
 				reset_counter();				//for counting down time
 				set_Timer1(green_duration*100);
 			}
@@ -86,8 +89,9 @@ void fsm_manual_run(){
 			set_yellow();
 			set_yellow_follow();
 			set_7segled_mode(4);
+			set_7segled_duration(MAN_duration);
 			if(timer1_flag==1){
-				status = AUTO_YELLOW;
+				status = AUTO_RED;
 				reset_counter();				//for counting down time
 				set_Timer1(yellow_duration*100);
 			}
