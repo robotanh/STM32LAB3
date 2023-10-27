@@ -12,4 +12,4 @@ set_traffic_led.c:269:6:set_autoAjust_green	16	static
 set_traffic_led.c:276:6:clear	8	static
 set_traffic_led.c:282:6:clear_follow	8	static
 set_traffic_led.c:289:6:set_7segled_mode	16	static
-set_traffic_led.c:345:6:set_7segled_duration	16	static
+set_traffic_led.c:359:6:set_7segled_duration	16	static

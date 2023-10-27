@@ -290,6 +290,8 @@ void set_7segled_mode(int mode)
 {
 	switch(mode){
 	case 1:
+		clear();
+		clear_follow();
 		if(timer5_flag==1 && led==0){
 			set_7Segment_1(led, 0);
 			led=1;
@@ -305,11 +307,15 @@ void set_7segled_mode(int mode)
 	case 2:
 		if(timer5_flag==1 && led==0){
 			set_7Segment_1(led, 0);
+			set_red();
+			clear_follow();
 			led=1;
 			set_Timer5(50);
 		}
 		else if(timer5_flag==1 && led==1){
 			set_7Segment_1(led, 2);
+			set_red_follow();
+			clear();
 			led=0;
 			set_Timer5(50);
 		}
@@ -317,11 +323,15 @@ void set_7segled_mode(int mode)
 	case 3:
 		if(timer5_flag==1 && led==0){
 			set_7Segment_1(led, 0);
+			set_yellow();
+			clear_follow();
 			led=1;
 			set_Timer5(50);
 		}
 		else if(timer5_flag==1 && led==1){
 			set_7Segment_1(led, 3);
+			set_yellow_follow();
+			clear();
 			led=0;
 			set_Timer5(50);
 		}
@@ -329,11 +339,15 @@ void set_7segled_mode(int mode)
 	case 4:
 		if(timer5_flag==1 && led==0){
 			set_7Segment_1(led, 0);
+			set_green();
+			clear_follow();
 			led=1;
 			set_Timer5(50);
 		}
 		else if(timer5_flag==1 && led==1){
 			set_7Segment_1(led, 4);
+			set_green_follow();
+			clear();
 			led=0;
 			set_Timer5(50);
 		}

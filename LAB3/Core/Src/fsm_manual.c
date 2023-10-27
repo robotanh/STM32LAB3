@@ -26,8 +26,8 @@ void fsm_manual_run(){
 			}
 			break;
 		case MAN_RED:
-			set_red();
-			set_red_follow();
+//			set_red();
+//			set_red_follow();
 			set_7segled_mode(2);
 			set_7segled_duration(MAN_duration);
 			if(timer1_flag == 1){
@@ -56,8 +56,8 @@ void fsm_manual_run(){
 			break;
 	////////////////////////////////////////
 		case MAN_GREEN:
-			set_green();
-			set_green_follow();
+//			set_green();
+//			set_green_follow();
 			set_7segled_mode(3);
 			set_7segled_duration(MAN_duration);
 			if(timer1_flag==1){
@@ -86,8 +86,8 @@ void fsm_manual_run(){
 			break;
 	///////////////////////////////////////////////////
 		case MAN_YELLOW:
-			set_yellow();
-			set_yellow_follow();
+//			set_yellow();
+//			set_yellow_follow();
 			set_7segled_mode(4);
 			set_7segled_duration(MAN_duration);
 			if(timer1_flag==1){
